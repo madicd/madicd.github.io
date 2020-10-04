@@ -1,0 +1,80 @@
+html {
+    font-family: system-ui;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.cover {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('cover-retro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-content {
+    color: white;
+}
+
+.phone-number {
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .cover-content h1 {
+        font-size: 30px;
+      }
+      .cover-content p {
+          font-size: 15px;
+      }
+}
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 400px) {
+    .cover-content h1 {
+        font-size: 40px;
+      }
+      .cover-content p {
+          font-size: 20px;
+      }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .cover-content h1 {
+        font-size: 60px;
+      }
+      .cover-content p {
+          font-size: 30px;
+      }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .cover-content h1 {
+        font-size: 60px;
+      }
+      .cover-content p {
+          font-size: 30px;
+      }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .cover-content h1 {
+        font-size: 80px;
+      }
+      .cover-content p {
+          font-size: 40px;
+      }
+}
