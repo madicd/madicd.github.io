@@ -1,43 +1,21 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- As far as I know, this JQuery version we use in MyCustomer -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
-    <form id="formId" action="">
-      <!-- Normal submit button triggers both Native event listener and JQuery event listener -->
-      <input type="submit" value="Normal submit without JavaScript" />
+    <link rel="stylesheet" href="style.css">
+</head>
 
-      <!-- Submit with native JavaScript does NOT trigger any event listeners -->
-      <a href="" onclick="nativeSubmit()">Native JavaScript submit</a>
+<body>
+    <div class="cover">
+        <div class="cover-content">
+            <h1>Dijana Dupalo</h1>
+            <p>Sudski tumač za italijanski jezik</p>
+            <p><span class="phone-number">061/223-14-22</span> | Pariska 12, Aranđelovac</p>
+        </div>
+    </div>
+</body>
 
-      <!-- Submit using JQuery triggers only JQuery event listener -->
-      <a href="" onclick="jquerySubmit()">JQuery submit</a>
-    </form>
-
-    <script>
-      (function() {
-        const form = document.getElementById("formId");
-        form.addEventListener("submit", () => {
-          console.log("Native event listener");
-        });
-
-        $(form).submit(() => {
-          console.log("JQuery event listener");
-        });
-      })();
-
-      nativeSubmit = () => {
-        document.getElementById("formId").submit();
-      };
-
-      jquerySubmit = () => {
-        $("#formId").submit();
-      };
-    </script>
-  </body>
 </html>
