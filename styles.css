@@ -1,0 +1,124 @@
+html, body {
+    margin: 0;
+    padding: 0; 
+    font-family: sans-serif;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.step-title {
+    text-align: center;
+}
+
+.cover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("cover.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-title {
+    font-family: 'Kaushan Script';
+    color: white;
+    text-shadow: 4px 2px black;
+    font-size: 4rem;
+}
+
+.cover-subtitle {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: lighter;
+    color: white;
+    text-align: left;
+}
+
+.tile-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.tile {
+    width: 300px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    margin: 5px;
+
+    cursor: pointer;
+}
+
+.tile-image {
+    height: 100%;
+    background-image: url("cup.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.tile:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.step form {
+    padding: 20px;
+}
+
+.back-button {
+    font-size: 1.2em;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+
+    margin: 10px;
+
+    padding: 10px;
+}
+
+.back-button:hover {
+    color:blue;
+    border-color: blue;
+}
+
+.porudzbina-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    height: 300px;
+    margin-top: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("cover.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}

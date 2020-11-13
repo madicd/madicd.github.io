@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan Script">
+</head>
+
+<body>
+    <div class="cover">
+        <h1 class="cover-title">Dobrodošli</h1>
+        <!-- <div class="cover-title-container"> -->
+        <!-- <p class="cover-subtitle">Mi pravimo čaše od papira</p> -->
+        <!-- </div> -->
+    </div>
+    <div class="content">
+        <div id="ponuda" class="step">
+            <h1 class="step-title">Ponuda</h1>
+            <div class="step-content tile-container">
+                <div class="tile ponuda-tile" id="casa1" data-product-category="7oz | 200ml">
+                    <div class="tile-image">
+                    </div>
+                    <p class="tile-label">7 oz | 200 ml</p>
+                </div>
+                <div class="tile ponuda-tile" id="casa2" data-product-category="8oz | 237ml">
+                    <div class="tile-image"></div>
+                    <p class="tile-label">8 oz | 237 ml</p>
+                </div>
+            </div>
+        </div>
+        <div id="izbor" class="step hidden">
+            <h1 class="step-title">Izaberite</h1>
+            <div class="step-content tile-container">
+                <div class="tile izbor-tile" data-product-name="Klasik">
+                    <div class="tile-image"></div>
+                    <p class="tile-label">Klasik</p>
+                </div>
+                <div class="tile izbor-tile" data-product-name="Dzungla">
+                    <div class="tile-image"></div>
+                    <p class="tile-label">Dzungla</p>
+                </div>
+                <div class="tile izbor-tile" data-product-name="Fensi">
+                    <div class="tile-image"></div>
+                    <p class="tile-label">Fensi</p>
+                </div>
+            </div>
+        </div>
+        <div id="porudzbina" class="step hidden">
+            <h1 class="step-title">Porudzbina</h1>
+            <div class="step-content dostava">
+                <p id="dostava-selected-message" class="hidden"></p>
+                <form>
+                    <div class="form-group">
+                        <label for="kolicina">Kolicina</label>
+                        <input type="number" class="form-control" id="kolicina" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="ime-i-prezime">Ime i prezime</label>
+                        <input type="text" class="form-control" id="ime-i-prezime">
+                    </div>
+                    <div class="form-group">
+                        <label for="kontakt-telefon">Kontakt telefon</label>
+                        <input type="text" class="form-control" id="kontakt-telefon">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="ulica">Ulica</label>
+                            <input type="text" id="ulica" class="form-control">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="broj">Broj</label>
+                            <input type="number" id="broj" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="grad">Grad</label>
+                            <input type="text" class="form-control" id="grad">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="postanski-broj">Postanski broj</label>
+                            <input type="number" class="form-control" id="postanski-broj" min="0">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary btn-block" id="poruci">Poruci</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="provera" class="step hidden">
+            <p>Provera</p>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+<script>
+    let selectedProductCategory = null;
+    let selectedProductName = null;
+    let selectedAmount = null;
+    let selectedName = null;
+    let selectedStreet = null;
+    let selectedStreetNo = null;
+    let selectedCity = null;
+    let selectedZipCode = null;
+
+    function showStep(stepToShow) {
+        document.querySelectorAll(".step").forEach((step) => {
+            step.classList.add("hidden");
+        });
+        stepToShow.classList.remove("hidden");
+    }
+    function highlight(tileToHighlight) {
+        document.querySelectorAll(".tile").forEach((tile) => {
+            tile.style.filter = "blur(4px)";
+        });
+        tileToHighlight.style.filter = "blur(0px)";
+    }
+    function unhighlight() {
+        document.querySelectorAll(".tile").forEach((tile) => {
+            tile.style.filter = "";
+        });
+    }
+    (function () {
+        const ponuda = document.getElementById("ponuda");
+        const izbor = document.getElementById("izbor");
+        const porudzbina = document.getElementById("porudzbina");
+        const provera = document.getElementById("provera");
+
+        document.querySelectorAll(".tile").forEach((tile) => {
+            tile.addEventListener("mouseenter", () => {
+                highlight(tile);
+            });
+            tile.addEventListener("mouseleave", () => {
+                unhighlight();
+            });
+        });
+
+        document.querySelectorAll(".ponuda-tile").forEach((ponudaTile) => {
+            ponudaTile.addEventListener("click", (event) => {
+                selectedProductCategory = ponudaTile.getAttribute("data-product-category");
+                showStep(izbor);
+            });
+        });
+        document.querySelectorAll(".izbor-tile").forEach((izborTile) => {
+            izborTile.addEventListener("click", (event) => {
+                selectedProductName = izborTile.getAttribute("data-product-name");
+                showStep(porudzbina);
+            });
+        });
+        document.getElementById("poruci").addEventListener("click", () => {
+            console.log('proverasdasd');
+            showStep(provera);
+        });
+    })();
+</script>
+
+</html>
