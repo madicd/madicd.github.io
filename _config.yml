@@ -24,9 +24,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   Come along with me as I share my journey in making software to solve real problems. I will talk about software engineering and testing.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://madicd.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: dmadic
-github_username:  madicd
-linkedin_username: djordjemadic
+minima:
+  social_links:
+    - { platform: twitter, user_url: "https://twitter.com/dmadic" }
+    - { platform: github, user_url: "https://github.com/madicd" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/djordjemadic/" }
 google_analytics: G-PLPXMFP33V
 
 # Build settings
