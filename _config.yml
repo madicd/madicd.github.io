@@ -30,9 +30,9 @@ linkedin_username: djordjemadic
 google_analytics: G-PLPXMFP33V
 
 # Build settings
-theme: minima
+remote_theme: jekyll/minima
 plugins:
-  - jekyll-feed
+  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.
