@@ -27,6 +27,7 @@ url: "https://madicd.github.io/" # the base hostname & protocol for your site, e
 twitter_username: dmadic
 github_username:  madicd
 linkedin_username: djordjemadic
+google_analytics: G-PLPXMFP33V
 
 # Build settings
 theme: minima
