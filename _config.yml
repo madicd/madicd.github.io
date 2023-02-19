@@ -35,6 +35,7 @@ google_analytics: G-PLPXMFP33V
 remote_theme: jekyll/minima
 plugins:
   - jekyll-remote-theme
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.
