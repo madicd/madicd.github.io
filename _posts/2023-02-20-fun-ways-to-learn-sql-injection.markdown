@@ -33,8 +33,7 @@ SQL injection is covered by 7 of them.
 helping individuals, companies and universities improve
 penetration testing skills. 
 
-Exercises are updated on
-a daily basis and progress of the user is tracked and awarded with
+Exercises are updated daily and progress of the user is tracked and awarded with
 points, ranks and badges. 
 
 They are performed in a
