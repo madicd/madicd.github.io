@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "❌ Make Your Tests Fail!"
+title:  "❌ Make your tests fail"
 date:   2023-02-10 21:28:48 +0100
 ---
 Over the years I developed a habit - after I see passing test, I break it hoping to see it to fail.
@@ -62,5 +62,3 @@ it('fails', (done) => {
     .catch(error => done(error));
 });
 ```
-
-## Thank you for reading! 👋
