@@ -21,7 +21,7 @@
 title: Djordje Madic
 email: madicdjordje@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Come along with me as I share my journey in making software to solve real problems. I will talk about software engineering and testing.
+  I have a need to write. I don't mind if you read.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://madicd.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 minima:
