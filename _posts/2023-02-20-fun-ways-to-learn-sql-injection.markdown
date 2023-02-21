@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "💉 Fun ways to learn SQL injection"
+title:  "Fun ways to learn SQL injection"
 date:   2023-02-20 20:26:48 +0100
 ---
 
