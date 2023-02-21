@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "❌ Make your tests fail"
+title:  "Make your tests fail"
 date:   2023-02-10 21:28:48 +0100
 ---
 Over the years I developed a habit - after I see passing test, I break it hoping to see it to fail.
@@ -37,7 +37,7 @@ it('passes', () => {
 });
 ```
 
-When expected value is changed to **something else**, the test still passes. 😮
+When expected value is changed to **something else**, the test still passes.
 
 ```javascript
 it('passes', () => {
@@ -47,7 +47,7 @@ it('passes', () => {
 });
 ```
 
-But.. Why? 😕
+But.. Why?
 
 It turns out that `then` never gets executed.
 
