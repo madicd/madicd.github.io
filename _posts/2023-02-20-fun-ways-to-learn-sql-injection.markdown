@@ -4,7 +4,7 @@ title:  "💉 Fun ways to learn SQL injection"
 date:   2023-02-20 20:26:48 +0100
 ---
 
-I spent several years specializing in software security for web applications. During that time, I worked on a side project where I created practical exercises to help students gain a better understanding of SQL injection and cultivate an interest in this important aspect of software security. As I have invested more than 300 hours in research of learning materials, I thought it might be worth sharing a few.
+I spent several years specializing in software security for web applications. During that time, I worked on a side project where I created practical exercises to help students gain a better understanding of SQL injection and cultivate an interest in it. As I have invested more than 100 hours in research of learning materials, I thought it might be worth sharing a few.
 
 ## Security Idiots
 
