@@ -19,15 +19,20 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Djordje Madic
-description: I have a need to write. I don't mind if you read.
+email: madicdjordje@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  I have a need to write. I don't mind if you read.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://madicd.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-social:
-    github: madicd
-    twitter: dmadic
-    linkedin: djordjemadic
+minima:
+  social_links:
+    - { platform: twitter, user_url: "https://twitter.com/dmadic" }
+    - { platform: github, user_url: "https://github.com/madicd" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/djordjemadic/" }
+google_analytics: G-PLPXMFP33V
+
 # Build settings
-remote_theme: madicd/long-haul
+remote_theme: jekyll/minima
 plugins:
   - jekyll-remote-theme
   - jekyll-sitemap

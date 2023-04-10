@@ -1,17 +1,6 @@
 ---
-layout: default
-title: Djordje Madic | Have a need to write. Don't mind if you read.
----
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-<div id="articles">
-  <h1>Articles</h1>
-  <ul class="posts noList">
-    {%- for post in site.posts -%}
-      <li>
-      	<span class="date">{{ post.date | date_to_string }}</span>
-      	<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-      	<p class="description">{%- if post.description -%}{{ post.description  | strip_html | strip_newlines | truncate: 120 }}{%- else -%}{{ post.content | strip_html | strip_newlines | truncate: 120 }}{%- endif -%}</p>
-      </li>
-    {%- endfor -%}
-  </ul>
-</div>
+layout: home
+---
